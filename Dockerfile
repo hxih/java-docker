@@ -1,7 +1,8 @@
 FROM hxih/baseimage
 MAINTAINER hxih
 RUN apk add --no-cache --virtual=.build-dependencies wget ca-certificates && \
-    mkdir -p /usr/{java,maven} && \
+    mkdir -p /usr/java && \
+    mkdir -p /usr/maven && \
     wget -q -O /usr/java/jdk8.tar.gz https://github.com/hxih/binary-file/raw/master/jdk-8u202-linux-x64.tar.gz && \
     wget -q -O /usr/maven/maven.tar.gz https://mirrors.tuna.tsinghua.edu.cn/apache/maven/maven-3/3.6.3/binaries/apache-maven-3.6.3-bin.tar.gz && \
     cd /usr/java/ && \
